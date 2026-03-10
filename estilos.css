@@ -1,0 +1,130 @@
+/* Paleta de colores inspirada en la Wiki de Resident Evil */
+:root {
+    --fondo-principal: #1a1a1b; /* Gris casi negro */
+    --fondo-secundario: #272728; /* Gris oscuro para secciones */
+    --rojo-umbrella: #ce1212; /* Rojo vibrante */
+    --borde: #3c3c3e;
+    --texto: #e1e1e1;
+    --enlace: #4ea1d3; /* Azul suave para enlaces estilo Wiki */
+}
+/* Configuración General */
+body {
+    background-color: var(--fondo-principal);
+    color: var(--texto);
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+/* Header y Navegación (Requisito 15) */
+header {
+    background-color: #000;
+    border-bottom: 4px solid var(--rojo-umbrella);
+    padding: 20px 0;
+    text-align: center;
+}
+header h1 {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+    color: #fff;
+}
+nav ul {
+    background: var(--fondo-secundario);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid var(--borde);
+}
+nav li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 25px;
+    display: block;
+    font-weight: bold;
+    transition: 0.3s;
+}
+nav li a:hover {
+    background-color: var(--rojo-umbrella);
+}
+/* Contenedor de Contenido (Secciones y Artículos) */
+section, aside, form {
+    max-width: 900px;
+    margin: 20px auto;
+    background-color: var(--fondo-secundario);
+    padding: 25px;
+    border: 1px solid var(--borde);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+/* Imágenes */
+img {
+    width: 320px;
+    height: auto;
+    border: 2px solid #444;
+    display: block;
+    margin: 15px auto;
+}
+
+.imagen-raccoon {
+    width: 600px;
+    height: 350px;
+    object-fit: cover;
+}
+/* Formulario*/
+fieldset {
+    border: 1px solid var(--rojo-umbrella);
+    padding: 20px;
+}
+legend {
+    color: var(--rojo-umbrella);
+    font-weight: bold;
+    padding: 0 10px;
+}
+label {
+    display: block;
+    margin-top: 10px;
+}
+input[type="text"], select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    background: #111;
+    border: 1px solid var(--borde);
+    color: white;
+}
+input[type="submit"] {
+    background-color: var(--rojo-umbrella);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+input[type="submit"]:hover {
+    background-color: #ff0000;
+}
+/* Enlaces Externos (Requisito 17) */
+a {
+    color: var(--enlace);
+}
+/* Footer (Requisito 15) */
+footer {
+    text-align: center;
+    padding: 30px;
+    font-size: 0.9em;
+    color: #888;
+}
+/* Adaptabilidad Móvil (Requisito 9) */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+    }
+    nav li a {
+        text-align: center;
+        border-bottom: 1px solid var(--borde);
+    }
+}

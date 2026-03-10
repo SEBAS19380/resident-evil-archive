@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Reportar Incidente - Umbrella Archive</title>
+<link rel="icon" href="favicon.ico" type="image/x-icon"> 
+<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+<header> 
+<h1>Resident Evil: Umbrella Archive</h1>
+<nav>
+<ul>
+<li><a href="index.html">Inicio</a></li>
+<li><a href="reporte.html">Generar Reporte</a></li>
+</ul>
+</nav>
+</header>
+<main>
+<section>
+<h2>Centro de Reportes de Emergencia</h2>
+<p><strong>Aviso:</strong> Esta terminal está conectada directamente con los servidores de la U.S.S. La geolocalización está activa.</p>
+<form action="guardar_reporte.php" method="post">
+<fieldset>
+<legend>Protocolo de Contención de Riesgos</legend>
+<label for="nombre">Nombre del Agente/Superviviente:</label>
+<input type="text" id="nombre" name="nombre" required placeholder="Ingrese nombre completo">
+<label for="ubicacion">Ubicación del Brote:</label>
+<select name="ubicacion" id="ubicacion">
+<option value="raccoon">Raccoon City</option>
+<option value="spencer">Mansión Spencer</option>
+<option value="rockfort">Isla Rockfort</option>
+<option value="nest">Laboratorio NEST</option>
+</select>
+<label>Tipo de Emergencia Principal:</label>
+<div class="radio-group">
+<input type="radio" id="brote" name="tipo" value="brote" checked>
+<label for="brote">Brote Viral</label>
+<input type="radio" id="fuga" name="tipo" value="fuga">
+<label for="fuga">Fuga de Especímenes</label>
+</div>
+<label>Amenazas Detectadas:</label>
+<div class="checkbox-group">
+<input type="checkbox" id="zombies" name="amenazas[]" value="zombies">
+<label for="zombies">Sujetos Reanimados</label>
+<input type="checkbox" id="mutantes" name="amenazas[]" value="mutantes">
+<label for="mutantes">Mutaciones Caninas</label>
+<input type="checkbox" id="armas" name="amenazas[]" value="armas">
+<label for="armas">Armas Bio-orgánicas</label>
+</div>
+<label for="gravedad">Nivel de Alerta (Riesgo Biológico):</label>
+<input type="range" id="gravedad" name="gravedad" min="1" max="10" value="5">
+<label for="detalles">Observaciones Adicionales:</label>
+<textarea id="detalles" name="detalles" rows="4" placeholder="Describa síntomas o comportamiento del espécimen..."></textarea>
+<input type="submit" value="Enviar Reporte a Central">
+</fieldset>
+</form>
+</section>
+</main>
+<footer> 
+<p>&copy; 2026 Proyecto Programación III</p>
+</footer>
+<script src="js/audio.js"></script>
+</body>
+</html>
